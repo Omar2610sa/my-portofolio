@@ -53,7 +53,7 @@ export default function Navbar() {
     }, [])
     return (
 <>
-        <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "backdrop-blur-2xl" : "bg-transparent"}`}>
+        <nav className={`fixed top-0 left-0 w-full z-100 transition-all duration-300 ${scrolled ? "backdrop-blur-2xl" : "bg-transparent"}`}>
             <div className="w-[95%] lg:w-[90% mx-auto h-16 flex items-center justify-between">
                 {/* Logo */}
                 <Logo />

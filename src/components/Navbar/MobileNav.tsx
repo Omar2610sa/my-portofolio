@@ -40,9 +40,9 @@ export default function MobileNav({ navOpen }: MobileNav) {
     return (
         <>
             {/* Overlay */}
-            <div className={`fixed inset-0 z-10 lg:hidden bg-background/70 backdrop-blur-sm duration-500 ${navOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+            <div className={`fixed inset-0 z-60 lg:hidden bg-background/70 backdrop-blur-sm duration-500 ${navOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
 
-                <aside className={`fixed top-0 right-0 z-50 h-full w-[80%] sm:w=[60%] lg:hidden bg-surface/95 backdrop-blur-md border border-1 border-border flex flex-col items-center justify-center space-y-2 px-6 transition-all duration-500 ${navOpen ? "translate-x-0" : "translate-x-full"}`}>
+                <aside className={`fixed top-0 right-0 z-60 h-full w-[80%] sm:w=[60%] lg:hidden bg-surface/95 backdrop-blur-md border border-1 border-border flex flex-col items-center justify-center space-y-2 px-6 transition-all duration-500 ${navOpen ? "translate-x-0" : "translate-x-full"}`}>
                     <ul>
                         {
                             navLinks.map((link, index) => {
