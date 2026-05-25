@@ -1,6 +1,6 @@
 import Link from "next/link"
 import LinkButton from "../Ui/LinkButton"
-import { Download } from "lucide-react"
+import { Download, LanguagesIcon } from "lucide-react"
 
 interface MobileNav {
     navOpen: boolean,
@@ -40,9 +40,9 @@ export default function MobileNav({ navOpen }: MobileNav) {
     return (
         <>
             {/* Overlay */}
-            <div className={`fixed inset-0 z-60 lg:hidden bg-background/70 backdrop-blur-sm duration-500 ${navOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
+            <div className={`fixed inset-0 z-60  lg:hidden bg-background/70 backdrop-blur-sm duration-500 ${navOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
 
-                <aside className={`fixed top-0 right-0 z-60 h-full w-[80%] sm:w=[60%] lg:hidden bg-surface/95 backdrop-blur-md border border-1 border-border flex flex-col items-center justify-center space-y-2 px-6 transition-all duration-500 ${navOpen ? "translate-x-0" : "translate-x-full"}`}>
+                <aside className={`fixed top-0 right-0 z-60 h-full w-[80%] sm:w=[60%] lg:hidden bg-surface/95 backdrop-blur-md  border-1 border-border flex flex-col items-center justify-center space-y-2 px-6 transition-all duration-500 ${navOpen ? "translate-x-0" : "translate-x-full"}`}>
                     <ul>
                         {
                             navLinks.map((link, index) => {
@@ -58,6 +58,11 @@ export default function MobileNav({ navOpen }: MobileNav) {
                         }
                         <li className="mt-5">
                             <LinkButton text="Download Cv" rounded iconPosition="left" icon={Download} href="/" />
+
+                        </li>
+                        <li className="mt-10 flex flex-col items-center justify-center gap-2">
+                            <LanguagesIcon className="w-6 h-6" />
+                            <span className="text-sm">Language</span>
 
                         </li>
                     </ul>

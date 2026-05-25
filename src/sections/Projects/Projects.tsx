@@ -2,7 +2,7 @@ import ProjecCard from "@/components/Project/ProjecCard"
 import SectionHeader from "@/components/Ui/SectionHeader"
 
 const projects = [
-    
+
     {
         title: "Tamkeen",
         description: "Professional recruitment and career consulting platform designed to connect qualified talents with leading opportunities across the Saudi and Gulf markets.",
@@ -38,6 +38,12 @@ const projects = [
         tags: ["React.js", "Javascript",],
         liveUrl: "",
     },
+    {
+        title: "Old Portofolio",
+description: "Personal portfolio website showcasing my projects, skills, and frontend development journey with a clean and responsive design.",        image: "/assets/Projects/Old portofolio.png",
+        tags: ["HTML 5", "CSS", "Javascript"],
+        liveUrl: "https://omar2610sa.github.io/Cv-2/",
+    },
 ]
 
 
@@ -54,7 +60,7 @@ export default function Projects() {
                         projects.map((project, index) => {
                             return (
                                 <div key={index}>
-                                    <ProjecCard  title={project.title}   description={project.description} image={project.image} liveUrl={project.liveUrl} tags={project.tags} />
+                                    <ProjecCard title={project.title} description={project.description} image={project.image} liveUrl={project.liveUrl} tags={project.tags} />
                                 </div>
                             )
                         })

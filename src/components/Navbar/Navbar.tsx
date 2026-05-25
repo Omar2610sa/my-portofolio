@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Logo from "./Logo"
 import Link from "next/link"
 import LinkButton from "../Ui/LinkButton"
-import { Download, MenuIcon, X } from "lucide-react"
+import { Download, LanguagesIcon, MenuIcon, X } from "lucide-react"
 import MobileNav from "./MobileNav"
 
 
@@ -71,13 +71,14 @@ export default function Navbar() {
                     })}
                 </ul>
 
-                <div className="hidden lg:block">
+                <div className="hidden lg:flex lg:items-center lg:gap-3">
                     <LinkButton text="Download Cv" rounded iconPosition="left" icon={Download} href="/" />
+                    <LanguagesIcon className="w-6 h-6" />
                 </div>
 
                 <button
                     onClick={() => setNavOpen(!navOpen)}
-                    className="z-90 lg:hidden w-10 h-10 rounded-lg flex items-center justify-center border border-border bg-surface/60 text-text hover:border-primary hover:text-primary transition">
+                    className="z-90 lg:hidden w-10 h-10  rounded-lg flex items-center justify-center border border-border bg-surface/60 text-text hover:border-primary hover:text-primary transition">
                     {
                         navOpen ?<>  <X size={22} /> <MobileNav navOpen={navOpen}/> </>  : <MenuIcon size={22} />
                     }
