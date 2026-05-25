@@ -23,7 +23,7 @@ const stats = [
     {
         icon: Award,
         count: 5,
-        title: 'Awards'
+        title: 'Certificates'
     }
 ]
 
@@ -34,7 +34,7 @@ export default function InfoSection() {
     });
 
     return (
-        <section id="info" className="relative overflow-hidden py-18" ref={ref}>
+        <section id="info" className="relative overflow-hidden py-12 bg-primary/10" ref={ref}>
             {/* Gradient accent */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl bg-primary/5" />
 

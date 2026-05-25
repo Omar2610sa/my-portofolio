@@ -1,6 +1,21 @@
+'use client';
+
 import { Code2, Layers, Zap } from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function AboutSection() {
+    const roles = ['Frontend Developer', 'Next.js Developer', 'Sales Expert'];
+    const [currentRole, setCurrentRole] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentRole((prev) => (prev + 1) % roles.length);
+        }, 2000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     const features = [
         {
             icon: Code2,
@@ -9,7 +24,7 @@ export default function AboutSection() {
         },
         {
             icon: Layers,
-            title: 'Modern Ui',
+            title: 'Modern UI',
             description: 'Modern and user-friendly interface design'
         },
         {
@@ -33,13 +48,25 @@ export default function AboutSection() {
                     </span>
 
                     <h2 className="text-4xl md:text-5xl font-bold leading-tight text-text max-w-2xl">
-                        Hi, I’m <span className='text-primary'>Omar Moataz</span>  Frontend Developer.
+                        Hi, I'm <span className='text-primary'>Omar Moataz</span>
+                        <br />
+                        <AnimatePresence mode="wait">
+                            <motion.span
+                                key={currentRole}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -20 }}
+                                transition={{ duration: 0.5 }}
+                                className="inline-block mt-5"
+                            >
+                                {roles[currentRole]}
+                            </motion.span>
+                        </AnimatePresence>
                     </h2>
 
-                    <div className="space-y-4 max-w-2xl">
+                    <p className="space-y-4 max-w-2xl text-gray-300 text-base leading-relaxed">
                         Specializing in Next.js, React, and TypeScript, passionate about building modern, responsive, and visually engaging web applications with clean code and smooth user experiences.
-
-                    </div>
+                    </p>
                 </div>
 
                 {/* Feature Cards */}
@@ -62,7 +89,6 @@ export default function AboutSection() {
                         )
                     })}
                 </div>
-
 
             </div>
         </section>
