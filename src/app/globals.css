@@ -18,7 +18,10 @@ body {
   color: var(--color-text);
 }
 
+html{
+  scroll-behavior: smooth;
 
+}
   
 
 .dot-grid {

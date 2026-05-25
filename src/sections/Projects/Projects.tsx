@@ -40,7 +40,7 @@ const projects = [
     },
     {
         title: "Old Portofolio",
-description: "Personal portfolio website showcasing my projects, skills, and frontend development journey with a clean and responsive design.",        image: "/assets/Projects/Old portofolio.png",
+        description: "Personal portfolio website showcasing my projects, skills, and frontend development journey with a clean and responsive design.", image: "/assets/Projects/Old portofolio.png",
         tags: ["HTML 5", "CSS", "Javascript"],
         liveUrl: "https://omar2610sa.github.io/Cv-2/",
     },
@@ -49,17 +49,18 @@ description: "Personal portfolio website showcasing my projects, skills, and fro
 
 export default function Projects() {
     return (
-        <section className="py-24 relative">
+        <section id="projects" className="py-24 relative">
             <div className="absolute top-1/4 left-1/3 -translate-x-1/2 w-80 h-60 rounded-full blur-3xl bg-primary/10" />
             <div className="w-[90%] max-w-6xl mx-auto space-y-12">
-
-                <SectionHeader badge="Projects" title="Some of my recent" highlight="work" description="A selection of projects showcasing my ability to design, build, and scale modern fullstack applications." />
+                <div data-aos="fade-up">
+                    <SectionHeader badge="Projects" title="Some of my recent" highlight="work" description="A selection of projects showcasing my ability to design, build, and scale modern fullstack applications." />
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 ">
                     {
                         projects.map((project, index) => {
                             return (
-                                <div key={index}>
+                                <div key={index} data-aos="fade-down">
                                     <ProjecCard title={project.title} description={project.description} image={project.image} liveUrl={project.liveUrl} tags={project.tags} />
                                 </div>
                             )

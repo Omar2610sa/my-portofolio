@@ -1,4 +1,6 @@
+import AnimationLayout from "@/components/Layout/AnimationLayout";
 import About from "@/sections/About/About";
+import Contact from "@/sections/Contact/Contact";
 import Experience from "@/sections/Experience/Experience";
 import Hero from "@/sections/Hero/Hero";
 import Info from "@/sections/Info/Info";
@@ -7,7 +9,7 @@ import Skills from "@/sections/Skills/Skills";
 
 export default function Home() {
   return (
-    <div className="">
+    <AnimationLayout>
       {/* Hero Section */}
       <Hero />
       {/* About Secton */}
@@ -20,7 +22,8 @@ export default function Home() {
       <Projects />
       {/* Experience Secton */}
       <Experience />
-      
-    </div>
+      {/* Contact Secton */}
+      <Contact />
+    </AnimationLayout>
   );
 }

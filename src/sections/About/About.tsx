@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
 export default function AboutSection() {
-    const roles = ['Frontend Developer', 'Next.js Developer', 'Sales Expert'];
+    const roles = ['Front-End Developer', 'Next.js Developer', 'Sales Experienced'];
     const [currentRole, setCurrentRole] = useState(0);
 
     useEffect(() => {
@@ -42,13 +42,13 @@ export default function AboutSection() {
             <div className="relative z-10 w-[90%] max-w-3xl mx-auto">
 
                 {/* Header */}
-                <div className="flex flex-col items-center justify-center text-center space-y-6 mb-16">
+                <div data-aos="fade-up"  className="flex flex-col items-center justify-center text-center space-y-6 mb-16">
                     <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-md border border-border">
                         About Me
                     </span>
 
                     <h2 className="text-4xl md:text-5xl font-bold leading-tight text-text max-w-2xl">
-                        Hi, I'm <span className='text-primary'>Omar Moataz</span>
+                        Hi, I am <span className='text-primary'>Omar Moataz</span>
                         <br />
                         <AnimatePresence mode="wait">
                             <motion.span
@@ -70,7 +70,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* Feature Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div data-aos="fade-down"  className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                     {features.map((feature) => {
                         const Icon = feature.icon
                         return (

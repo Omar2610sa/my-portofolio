@@ -19,7 +19,7 @@ const skillsData = [
 
 export default function Skills() {
     const { ref, inView } = useInView({
-        threshold: 0.2,
+        threshold: 0.5,
         triggerOnce: true
     });
 
@@ -28,15 +28,18 @@ export default function Skills() {
             {/* Gradient accent */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl bg-primary/5" />
 
-            <div className="relative z-10 w-[90%] max-w-4xl mx-auto">
+            <div  className="relative z-10 w-[90%] max-w-4xl mx-auto">
+                <div data-aos="fade-up">
+
                 <SectionHeader
                     badge='Skills'
                     title='Technologies I'
                     highlight='Master'
                     description='A selection of technologies I specialize in to design, build, and scale modern front-end websites.'
-                />
+                    />
+                    </div>
                 {/* Skills Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                <div  className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
                     {skillsData.map((skill, index) => (
                         <SkillCard
                             key={index}

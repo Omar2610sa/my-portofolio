@@ -27,28 +27,28 @@ export default function Hero() {
             </div>
 
             {/* Content */}
-            <div className='relative z-10 w-[90%] grid grid-cols-1 mx-auto lg:grid-cols-2 items-center'>
+            <div  className='relative z-10 w-[90%] grid grid-cols-1 mx-auto lg:grid-cols-2 items-center'>
 
                 {/* content text */}
-                <div className='space-y-6'>
-                    <span className='inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-md border border-border'>
+                <div  className='space-y-6'>
+                    <span data-aos="fade-up" className='inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-md border border-border'>
                         Front-End Developer ◦ Next.js Specialest
                     </span>
 
-                    <h1 className='text-primary text-4xl md:text-5xl font-bold leading-tight capitalize text-text'>
+                    <h1 data-aos="fade-up" data-aos-delay="200" className='text-primary text-4xl md:text-5xl font-bold leading-tight capitalize text-text'>
                         Building modern web experiences with <span className='text-primary/70'>Clean Code</span>
                     </h1>
 
-                    <p className='text-gray-300 max-w-lg tracking-wide'>
+                    <p data-aos="fade-up" data-aos-delay="400" className='text-gray-300 max-w-lg tracking-wide'>
                         A Frontend-focused Software Engineer who loves building modern, scalable, and visually engaging web applications with Next.js, React, and TypeScript.                    </p>
-                    <div className='flex items-center gap-4 pt-2'>
+                    <div data-aos="fade-up" className='flex items-center gap-4 pt-2'>
                         <LinkButton href='#contact' text='Get in touch' icon={ArrowRight} rounded />
                         <LinkButton href='#projects' text='View projects' variant='outline' rounded />
                     </div>
                 </div>
 
                 {/* Image */}
-                <div className='flex justify-center lg:justify-end mt-12 '>
+                <div data-aos="fade-left"  className='flex justify-center lg:justify-end mt-12 '>
                     <div className='relative w-85 h-85 md:w-110 md:h-110 rounded-full border border-border flex items-center justify-center'>
                         <div className='absolute z-10 inset-0 rounded-full bg-primary/20 blur-3xl' />
                         <Image
