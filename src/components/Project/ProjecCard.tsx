@@ -7,7 +7,7 @@ interface ProjecCard {
     description: string
     liveUrl: string
     image: string
-    tags: []
+    tags: string[]
 }
 
 export default function ProjecCard({ title,
