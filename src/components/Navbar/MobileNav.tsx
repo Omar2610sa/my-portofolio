@@ -1,73 +1,64 @@
+"use client"
+
 import Link from "next/link"
-import LinkButton from "../Ui/LinkButton"
-import { Download, LanguagesIcon } from "lucide-react"
+// import LinkButton from "../Ui/LinkButton"
+// import { Download } from "lucide-react"
+import { motion } from "framer-motion"
 
 interface MobileNav {
     navOpen: boolean,
-
+    setNavOpen: (value: boolean) => void
 }
 
-
 const navLinks = [
-    {
-        href: "#home",
-        label: "Home"
-    },
-    {
-        href: "#about",
-        label: "About"
-    },
-    {
-        href: "#skills",
-        label: "Skills"
-    },
-    {
-        href: "#projects",
-        label: "Projects"
-    },
-    {
-        href: "#experience",
-        label: "Experience"
-    },
-    {
-        href: "#contact",
-        label: "Contact"
-    },
-
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#experience", label: "Experience" },
+    { href: "#contact", label: "Contact" },
 ]
 
-export default function MobileNav({ navOpen }: MobileNav) {
+export default function MobileNav({ navOpen, setNavOpen }: MobileNav) {
     return (
-        <>
-            {/* Overlay */}
-            <div className={`fixed inset-0 z-60  lg:hidden bg-background/70 backdrop-blur-sm duration-500 ${navOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}>
-
-                <aside className={`fixed top-0 right-0 z-60 h-full w-[80%] sm:w=[60%] lg:hidden bg-surface/95 backdrop-blur-md  border-1 border-border flex flex-col items-center justify-center space-y-2 px-6 transition-all duration-500 ${navOpen ? "translate-x-0" : "translate-x-full"}`}>
-                    <ul>
-                        {
-                            navLinks.map((link, index) => {
-                                return (
-                                    <li key={index}>
-                                        <Link href={link.href} className="block w-full text-center py-4 px-6 rounded-lg text-lg font-medium text-text border border-transparent transition-all duration-300 hover:bg-primary/10 haver:text-primary hover:border-border">
-                                            {link.label}
-                                        </Link>
-                                    </li>
-
-                                )
-                            })
-                        }
-                        <li className="mt-5">
-                            <LinkButton text="Download Cv" rounded iconPosition="left" icon={Download} href="/" />
-
-                        </li>
-                        <li className="mt-10 flex flex-col items-center justify-center gap-2">
-                            <LanguagesIcon className="w-6 h-6" />
-                            <span className="text-sm">Language</span>
-
-                        </li>
-                    </ul>
-                </aside>
-            </div >
-        </>
+        <motion.div
+            className="fixed inset-0 z-40 lg:hidden bg-background/70 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+        >
+            <motion.aside
+                className="fixed top-0 right-0 z-50 h-full w-[75%] sm:w-[60%] bg-surface/95 backdrop-blur-md border border-border flex flex-col items-center justify-center px-6"
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
+                <ul className="w-full">
+                    {navLinks.map((link, index) => (
+                        <motion.li
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            onClick={()=> setNavOpen(false)}
+                        >
+                            <Link href={link.href}  className="block w-full text-center py-6 px-6 rounded-lg text-xl font-medium text-text border border-transparent transition-all hover:bg-primary/10 hover:text-primary hover:border-border">
+                                {link.label}
+                            </Link>
+                        </motion.li>
+                    ))}
+                    <motion.li
+                        className="mt-5"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: navLinks.length * 0.1 }}
+                    >
+                        {/* <LinkButton text="Download Cv" rounded iconPosition="left" icon={Download} href="/" /> */}
+                    </motion.li>
+                </ul>
+            </motion.aside>
+        </motion.div>
     )
 }

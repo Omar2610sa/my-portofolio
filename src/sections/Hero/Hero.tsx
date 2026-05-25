@@ -27,7 +27,7 @@ export default function Hero() {
             </div>
 
             {/* Content */}
-            <div  className='relative z-10 w-[90%] grid grid-cols-1 mx-auto lg:grid-cols-2 items-center'>
+            <div  className='relative z-10 w-[90%] grid grid-cols-1 mx-auto lg:grid-cols-2 items-center text-center md:text-start'>
 
                 {/* content text */}
                 <div  className='space-y-6'>
@@ -41,7 +41,7 @@ export default function Hero() {
 
                     <p data-aos="fade-up" data-aos-delay="400" className='text-gray-300 max-w-lg tracking-wide'>
                         A Frontend-focused Software Engineer who loves building modern, scalable, and visually engaging web applications with Next.js, React, and TypeScript.                    </p>
-                    <div data-aos="fade-up" className='flex items-center gap-4 pt-2'>
+                    <div data-aos="fade-up" className='flex items-center justify-center md:justify-start gap-4 pt-2'>
                         <LinkButton href='#contact' text='Get in touch' icon={ArrowRight} rounded />
                         <LinkButton href='#projects' text='View projects' variant='outline' rounded />
                     </div>
