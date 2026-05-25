@@ -1,6 +1,7 @@
 import About from "@/sections/About/About";
 import Experience from "@/sections/Experience/Experience";
 import Hero from "@/sections/Hero/Hero";
+import Info from "@/sections/Info/Info";
 import Projects from "@/sections/Projects/Projects";
 
 export default function Home() {
@@ -10,6 +11,8 @@ export default function Home() {
       <Hero />
       {/* About Secton */}
       <About />
+      {/* Info Secton */}
+      <Info />
       {/* Projects Secton */}
       <Projects />
       {/* Experience Secton */}
