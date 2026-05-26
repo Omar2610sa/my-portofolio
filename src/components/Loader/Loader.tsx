@@ -21,7 +21,7 @@ export default function Loader() {
             setTimeout(() => {
                 setIsLoading(false);
             }, 300);
-        }, 2000); // 2 ثواني
+        }, 3000); // 2 ثواني
 
         return () => {
             clearInterval(interval);

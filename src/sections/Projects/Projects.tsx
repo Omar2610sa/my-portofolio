@@ -11,21 +11,21 @@ export default function Projects() {
             description: t('projects.items.tamkeen.description'),
 
             image: "/assets/Projects/tamkeen.png",
-            tags: ["Next.js", "Typescript","Tailwind","AOS animation","Yup"],
+            tags: ["Next.js", "Typescript", "Tailwind", "AOS animation", "Yup"],
             liveUrl: "",
         },
         {
             title: "Eraf Page",
             description: t('projects.items.eraf.description'),
             image: "/assets/Projects/eraf.png",
-            tags: ["React.js", "Typescript","Tailwind","AOS","Framer motions","Axios"],
+            tags: ["React.js", "Typescript", "Tailwind", "AOS", "Framer motions", "Axios"],
             liveUrl: "https://eraf-project.vercel.app/",
         },
         {
             title: "Admin Dashboard",
             description: t('projects.items.admin.description'),
-            image: "/assets/Projects/dashboard.png",
-            tags: ["React.js", "Typescript", "Tanstack Query", "ShadCn","Yup"],
+            image: "/assets/Projects/Dashboard.png",
+            tags: ["React.js", "Typescript", "Tanstack Query", "ShadCn", "Yup"],
             liveUrl: "",
         },
         {

@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import { cn } from "@/lib/utils";
 import Footer from "@/sections/Footer/Footer";
 import Loader from "@/components/Loader/Loader";
+import ScrollToTop from "@/components/ScroolToTop/ScrollTop";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -36,6 +37,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <ScrollToTop />
         </body>
     </html>
   );

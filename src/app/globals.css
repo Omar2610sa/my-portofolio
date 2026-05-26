@@ -46,3 +46,16 @@ html{
   height: 100%;
   pointer-events: none;
 }
+
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-card);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  border: 3px solid var(--color-card);
+}

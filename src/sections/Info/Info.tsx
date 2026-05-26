@@ -9,12 +9,12 @@ import { useTranslation } from 'react-i18next';
 const stats = [
     {
         icon: Code2Icon,
-        count: 45,
+        count: 38,
         titleKey: 'info.stats.projects'
     },
     {
         icon: Users2Icon,
-        count: 13,
+        count: 15,
         titleKey: 'info.stats.clients'
     },
     {
@@ -60,7 +60,7 @@ export default function InfoSection() {
                                             end={stat.count}
                                             duration={2}
                                             separator=","
-                                        />
+                                        />+
                                     </span>
                                 ) : (
                                     <span className="text-4xl font-bold text-text">0</span>
