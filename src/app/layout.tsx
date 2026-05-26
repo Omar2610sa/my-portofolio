@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
 import { cn } from "@/lib/utils";
 import Footer from "@/sections/Footer/Footer";
+import Loader from "@/components/Loader/Loader";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", poppins.className, poppins.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col">
+        <Loader/>
         <Navbar />
         {children}
         <Footer />

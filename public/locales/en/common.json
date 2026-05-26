@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "downloadCv": "Download Cv"
+  },
+  "hero": {
+    "tagline": "Front-End Developer ◦ Next.js Specialist",
+    "role1": "Frontend-focused Software Engineer",
+    "headline": "Building modern web experiences with",
+    "headlineHighlight": "Clean Code",
+    "description": "A Frontend-focused Software Engineer who loves building modern, scalable, and visually engaging web applications with Next.js, React, and TypeScript.",
+    "getInTouch": "Get in touch",
+    "viewProjects": "View projects"
+  },
+  "about": {
+    "typed": {
+      "role1": "Front-End Developer",
+      "role2": "Next.js Developer",
+      "role3": "Sales Experienced"
+    },
+    "name": "Omar Moataz",
+    "badge": "About Me",
+    "titlePrefix": "Hi, I am",
+    "roleDefault": "Front-End Developer",
+    "p": "Specializing in Next.js, React, and TypeScript, passionate about building modern, responsive, and visually engaging web applications with clean code and smooth user experiences.",
+    "features": {
+      "cleanCode": {
+        "title": "Clean Code",
+        "description": "Maintainable and scalable architecture"
+      },
+      "modernUi": {
+        "title": "Modern UI",
+        "description": "Modern and user-friendly interface design"
+      },
+      "performance": {
+        "title": "Performance",
+        "description": "Optimized for speed and efficiency"
+      }
+    }
+  },
+  "skills": {
+    "badge": "Skills",
+    "titlePrefix": "Technologies I",
+    "highlight": "Master",
+    "description": "A selection of technologies I specialize in to design, build, and scale modern front-end websites."
+  },
+  "projects": {
+    "badge": "Projects",
+    "titlePrefix": "Some of my recent",
+    "highlight": "work",
+    "description": "A selection of projects showcasing my ability to design, build, and scale modern fullstack applications.",
+    "items": {
+      "tamkeen": {
+        "description": "Professional recruitment and career consulting platform designed to connect qualified talents with leading opportunities across the Saudi and Gulf markets."
+      },
+      "eraf": {
+        "description": "A modern home healthcare platform providing trusted medical and patient care services with a seamless and user-friendly experience."
+      },
+      "admin": {
+        "description": "Ecommerce management dashboard featuring product control, order management, analytics, and responsive UI built for seamless administration."
+      },
+      "plants": {
+        "description": "Nature-inspired landing page designed to showcase the positive impact of plants through a modern and clean user experience."
+      },
+      "wealth": {
+        "description": "Real estate web application focused on simplifying property search and helping users find places that truly feel like home."
+      },
+      "old": {
+        "description": "Personal portfolio website showcasing my projects, skills, and frontend development journey with a clean and responsive design."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Let's build",
+    "highlight": "something great",
+    "description": "Have a project in mind? I'd love to hear about it. Let's connect.",
+    "sendMessage": "Send a message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "phone": "Phone",
+    "location": "Location",
+    "github": "GitHub",
+    "subject": "Subject",
+    "button": "Send",
+    "infoTitle": "Contact Information",
+    "placeholders": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "phone": "Your Phone"
+    },
+    "placeholdersDeprecated": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "phone": "Your Phone"
+    }
+  },
+  "info": {
+    "stats": {
+      "projects": "Projects",
+      "clients": "Clients",
+      "skills": "Skills",
+      "certificates": "Certificates"
+    }
+  },
+  "experience": {
+    "title": "Experience that",
+    "description": "A timeline of my growth as a developer, from learning the fundamentals to building Front-End websites.",
+    "badge": "Experience",
+    "highlight": "speaks volumes",
+    "items": {
+      "0": {
+        "role": "Front-End Developer",
+        "company": "Al Almiya Alhura",
+        "description": "Build modern E-commerce, Admin Dashboard, and Landing pages with modern technology.",
+        "period": "2026 - Present",
+        "tech": [
+          "Next.js",
+          "React.js",
+          "TypeScript",
+          "Zod",
+          "Tanstack Query"
+        ]
+      },
+      "1": {
+        "role": "Software Sales",
+        "company": "Transition Agency",
+        "description": "Experience to build strategies for software projects and dealing with customers.",
+        "period": "Oct 2024 - Mar 2026",
+        "tech": [
+          "Sales experienced",
+          "Negotiation"
+        ]
+      },
+      "2": {
+        "role": "Software Sales",
+        "company": "Azzrak Agency",
+        "description": "Worked in software sales within the Saudi market and building client strategies.",
+        "period": "Mar 2024 - Oct 2024",
+        "tech": [
+          "Communication",
+          "Negotiation",
+          "Client Relations"
+        ]
+      },
+      "3": {
+        "role": "Front-End Intern",
+        "company": "Azzrak Agency",
+        "description": "Learned frontend fundamentals and responsive web design through real-world projects.",
+        "period": "Nov 2023 - Mar 2024",
+        "tech": [
+          "React.js",
+          "SEO",
+          "(Sales)"
+        ]
+      },
+      "4": {
+        "role": "Document Specialist",
+        "company": "Yec Organization",
+        "description": "",
+        "period": "Sep 2022 - Jan 2023",
+        "tech": [
+          "Document Management",
+          "Data Entry",
+          "Communication Skills"
+        ]
+      }
+    }
+  }
+}
+

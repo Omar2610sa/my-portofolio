@@ -3,9 +3,11 @@
 import { Code2, Layers, Zap } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function AboutSection() {
-    const roles = ['Front-End Developer', 'Next.js Developer', 'Sales Experienced'];
+    const { t } = useTranslation()
+    const roles = [t('about.typed.role1'), t('about.typed.role2'), t('about.typed.role3')];
     const [currentRole, setCurrentRole] = useState(0);
 
     useEffect(() => {
@@ -19,18 +21,18 @@ export default function AboutSection() {
     const features = [
         {
             icon: Code2,
-            title: 'Clean Code',
-            description: 'Maintainable and scalable architecture'
+            title: t('about.features.cleanCode.title'),
+            description: t('about.features.cleanCode.description')
         },
         {
             icon: Layers,
-            title: 'Modern UI',
-            description: 'Modern and user-friendly interface design'
+            title: t('about.features.modernUi.title'),
+            description: t('about.features.modernUi.description')
         },
         {
             icon: Zap,
-            title: 'Performance',
-            description: 'Optimized for speed and efficiency'
+            title: t('about.features.performance.title'),
+            description: t('about.features.performance.description')
         }
     ]
 
@@ -44,11 +46,11 @@ export default function AboutSection() {
                 {/* Header */}
                 <div data-aos="fade-up"  className="flex flex-col items-center justify-center text-center space-y-6 mb-16">
                     <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-md border border-border">
-                        About Me
+                        {t('about.badge')}
                     </span>
 
                     <h2 className="text-4xl md:text-5xl font-bold leading-tight text-text max-w-2xl">
-                        Hi, I am <span className='text-primary'>Omar Moataz</span>
+                        {t('about.titlePrefix')} <span className='text-primary'>{t("about.name")}</span>
                         <br />
                         <AnimatePresence mode="wait">
                             <motion.span
@@ -65,7 +67,7 @@ export default function AboutSection() {
                     </h2>
 
                     <p className="space-y-4 max-w-2xl text-gray-300 text-base leading-relaxed">
-                        Specializing in Next.js, React, and TypeScript, passionate about building modern, responsive, and visually engaging web applications with clean code and smooth user experiences.
+                        {t('about.p')}
                     </p>
                 </div>
 

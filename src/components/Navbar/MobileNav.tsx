@@ -4,22 +4,45 @@ import Link from "next/link"
 // import LinkButton from "../Ui/LinkButton"
 // import { Download } from "lucide-react"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 interface MobileNav {
     navOpen: boolean,
     setNavOpen: (value: boolean) => void
 }
 
-const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#skills", label: "Skills" },
-    { href: "#projects", label: "Projects" },
-    { href: "#experience", label: "Experience" },
-    { href: "#contact", label: "Contact" },
-]
+
 
 export default function MobileNav({ navOpen, setNavOpen }: MobileNav) {
+    
+    const { t } = useTranslation()
+    
+        const navLinks = [
+            {
+                href: "#home",
+                label: t('nav.home')
+            },
+            {
+                href: "#about",
+                label: t('nav.about')
+            },
+            {
+                href: "#skills",
+                label: t('nav.skills')
+            },
+            {
+                href: "#projects",
+                label: t('nav.projects')
+            },
+            {
+                href: "#experience",
+                label: t('nav.experience')
+            },
+            {
+                href: "#contact",
+                label: t('nav.contact')
+            },
+        ]
     return (
         <motion.div
             className="fixed inset-0 z-40 lg:hidden bg-background/70 backdrop-blur-sm"

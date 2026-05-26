@@ -6,17 +6,17 @@ export default function Footer() {
     const socialLinks = [
         {
             icon: LuGithub,
-            href: 'https://github.com/Omar2610',
+            href: 'https://github.com/Omar2610sa',
             label: 'GitHub'
         },
         {
             icon: LuLinkedin, 
-            href: 'https://linkedin.com/in/omar-moataz',
+            href: 'https://www.linkedin.com/in/omar-salam-064126257/',
             label: 'LinkedIn'
         },
         {
             icon: LuMail,
-            href: 'mailto:omarmooataz26@gmail.com',
+            href: 'omarmooataz26@gmail.com',
             label: 'Email'
         }
     ]
@@ -54,7 +54,7 @@ export default function Footer() {
                 </div>
 
                 {/* Divider */}
-                <div data-aos="fade-up" className="border-t border-border mt-8 pt-8">
+                <div className="border-t border-border mt-8 pt-8">
                     <p className="text-center text-md text-gray-500">
                         © {currentYear} Omar Moataz. All rights reserved.
                     </p>

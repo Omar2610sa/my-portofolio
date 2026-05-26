@@ -3,29 +3,32 @@
 import SectionHeader from "@/components/Ui/SectionHeader"
 import { Input } from "@base-ui/react"
 import { GitBranch, Mail,  MapPin, SendIcon } from "lucide-react"
-
-const contactInfo = [
-    {
-        icon: Mail,
-        label: "Email",
-        value: "omarmooataz26@gmail.com",
-        href: "mailto:omarmooataz26@gmail.com",
-    },
-    {
-        icon: GitBranch,
-        label: "GitHub",
-        value: "Omar2610",
-        href: "https://github.com/Omar2610",
-    },
-    {
-        icon: MapPin,
-        label: "Location",
-        value: "Egypt, Mansoura | Cairo",
-        href: "#",
-    },
-]
+import { useTranslation } from "react-i18next"
 
 export default function Contact() {
+    const { t } = useTranslation()
+
+    const contactInfo = [
+        {
+            icon: Mail,
+            label: t('contact.email'),
+            value: "omarmooataz26@gmail.com",
+            href: "mailto:omarmooataz26@gmail.com",
+        },
+        {
+            icon: GitBranch,
+            label: t('contact.github'),
+            value: "Omar2610",
+            href: "https://github.com/Omar2610",
+        },
+        {
+            icon: MapPin,
+            label: t('contact.location'),
+            value: t('contact.locationDetails'),
+            href: "#",
+        },
+    ]
+
     return (
         <section id="contact" className="py-24 relative overflow-hidden">
             <div className="w-[90%] max-w-6xl mx-auto relative z-10 space-y-16">
@@ -35,11 +38,11 @@ export default function Contact() {
                 
                 {/* Header */}
                 <div data-aos="fade-up">
-                <SectionHeader 
-                    badge="Contact" 
-                    description="Have a project in mind? I'd love to hear about it. Let's connect." 
-                    title="Let's build" 
-                    highlight="something great" 
+                    <SectionHeader 
+                    badge={t('contact.badge')} 
+                    description={t('contact.description')} 
+                    title={t('contact.title')} 
+                    highlight={t('contact.highlight')} 
                 />
                 </div>
 
@@ -48,48 +51,57 @@ export default function Contact() {
                     {/* Left Form */}
                     <form onSubmit={(e) => { e.preventDefault() }} className="p-6 rounded-2xl bg-surface border border-border space-y-5">
                         <h3 className="text-lg font-semibold text-text">
-                            Send a message
+                            {t('contact.sendMessage')}
                         </h3>
                         {/* Name */}
                         <div>
-                            <label className="text-sm text-text-muted block mb-1">Name</label>
+                            <label className="text-sm text-text-muted block mb-1">{t('contact.name')}</label>
                             <Input 
                                 required 
                                 className="w-full px-4 py-2 rounded-lg bg-background border border-border text-text outline-none focus:border-primary transition" 
-                                placeholder="Your Name" 
+                                placeholder={t('contact.placeholders.name')} 
                                 type="text" 
                             />
                         </div>
                         {/* Email */}
                         <div>
-                            <label className="text-sm text-text-muted block mb-1">Email</label>
+                            <label className="text-sm text-text-muted block mb-1">{t('contact.email')}</label>
                             <Input 
                                 required 
                                 className="w-full px-4 py-2 rounded-lg bg-background border border-border text-text outline-none focus:border-primary transition" 
-                                placeholder="Your Email" 
+                                placeholder={t('contact.placeholders.email')}
                                 type="email" 
+                            />
+                        </div>
+                        {/* Message */}
+                        <div>
+                            <label className="text-sm text-text-muted block mb-1">{t('contact.message')}</label>
+                            <textarea 
+                                required 
+                                className="w-full px-4 py-2 rounded-lg bg-background border border-border text-text outline-none focus:border-primary transition" 
+                                placeholder={t('contact.placeholders.message')}
                             />
                         </div>
                         {/* Phone */}
                         <div>
-                            <label className="text-sm text-text-muted block mb-1">Phone</label>
+                            <label className="text-sm text-text-muted block mb-1">{t('contact.phone')}</label>
                             <Input 
                                 required 
                                 className="w-full px-4 py-2 rounded-lg bg-background border border-border text-text outline-none focus:border-primary transition" 
-                                placeholder="Your Phone" 
+                                placeholder={t('contact.placeholders.phone')}
                                 type="tel" 
                             />
                         </div>
 
                         {/* Submit */}
                         <button className="w-full py-3 rounded-full bg-primary text-gray-200 font-medium hover:opacity-90 transition flex items-center justify-center gap-2 cursor-pointer">
-                            Send Message <SendIcon className="w-4 h-4" />
+                            {t('contact.button')} <SendIcon className="w-4 h-4" />
                         </button>
                     </form>
                     
                     {/* Right Contact Info */}
                     <div className="rounded-3xl p-6">
-                        <h3 className="text-xl font-semibold mb-6 text-text">Contact Information</h3>
+                        <h3 className="text-xl font-semibold mb-6 text-text">{t('contact.infoTitle')}</h3>
                         <div className="space-y-4">
                             {contactInfo.map((item, index) => {
                                 const Icon = item.icon

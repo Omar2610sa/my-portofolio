@@ -3,6 +3,7 @@
 import { useInView } from 'react-intersection-observer';
 import SectionHeader from '@/components/Ui/SectionHeader';
 import { SkillCard } from '@/components/Ui/SkillsCard';
+import { useTranslation } from 'react-i18next';
 
 const skillsData = [
     { name: 'Next.js', percentage: 85 },
@@ -18,6 +19,7 @@ const skillsData = [
 ]
 
 export default function Skills() {
+    const { t } = useTranslation()
     const { ref, inView } = useInView({
         threshold: 0.5,
         triggerOnce: true
@@ -28,18 +30,18 @@ export default function Skills() {
             {/* Gradient accent */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl bg-primary/5" />
 
-            <div  className="relative z-10 w-[90%] max-w-4xl mx-auto">
+            <div className="relative z-10 w-[90%] max-w-4xl mx-auto">
                 <div data-aos="fade-up">
 
-                <SectionHeader
-                    badge='Skills'
-                    title='Technologies I'
-                    highlight='Master'
-                    description='A selection of technologies I specialize in to design, build, and scale modern front-end websites.'
+                    <SectionHeader
+                        badge={t('skills.badge')}
+                        title={t('skills.titlePrefix')}
+                        highlight={t('skills.highlight')}
+                        description={t('skills.description')}
                     />
-                    </div>
+                </div>
                 {/* Skills Grid */}
-                <div  className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
                     {skillsData.map((skill, index) => (
                         <SkillCard
                             key={index}

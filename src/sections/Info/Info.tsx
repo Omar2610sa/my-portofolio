@@ -4,26 +4,28 @@ import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import { Users2Icon, Code2Icon, Zap, Award } from "lucide-react"
 
+import { useTranslation } from 'react-i18next';
+
 const stats = [
     {
         icon: Code2Icon,
         count: 45,
-        title: 'Projects'
+        titleKey: 'info.stats.projects'
     },
     {
         icon: Users2Icon,
         count: 13,
-        title: 'Clients'
+        titleKey: 'info.stats.clients'
     },
     {
         icon: Zap,
         count: 10,
-        title: 'Skills'
+        titleKey: 'info.stats.skills'
     },
     {
         icon: Award,
         count: 5,
-        title: 'Certificates'
+        titleKey: 'info.stats.certificates'
     }
 ]
 
@@ -32,8 +34,10 @@ export default function InfoSection() {
         threshold: 0.3,
         triggerOnce: true
     });
+    const { t } = useTranslation();
 
     return (
+
         <section id="info" className="relative overflow-hidden py-12 bg-primary/10" ref={ref}>
             {/* Gradient accent */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl bg-primary/5" />
@@ -61,7 +65,8 @@ export default function InfoSection() {
                                 ) : (
                                     <span className="text-4xl font-bold text-text">0</span>
                                 )}
-                                <p className="text-lg text-gray-300">{stat.title}</p>
+                                <p className="text-lg text-gray-300">{t(stat.titleKey)}</p>
+
                             </div>
                         )
                     })}

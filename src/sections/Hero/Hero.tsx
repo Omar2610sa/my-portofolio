@@ -7,10 +7,13 @@ import LinkButton from '@/components/Ui/LinkButton'
 import { ArrowRight } from 'lucide-react'
 import logo from "../../../public/assets/5807884988358266879.jpg"
 import Image from 'next/image'
+import { useTranslation } from 'react-i18next';
 
 export default function Hero() {
     const el = useRef(null);
     const typed = useRef<Typed | null>(null);
+    const { t } = useTranslation()
+
 
     useEffect(() => {
         typed.current = new Typed(el.current, {
@@ -33,7 +36,7 @@ export default function Hero() {
     return (
         <section id='home' className='relative min-h-screen overflow-hidden flex items-center pt-30 py-10'>
             <div className='absolute top-1/4 left-1/3 -translate-x-1/2 w-80 h-60 rounded-full blur-3xl bg-primary/10' />
-            
+
             {/* Background */}
             <div className='absolute inset-0'>
                 <DotGrid
@@ -59,16 +62,16 @@ export default function Hero() {
                     </span>
 
                     <h1 data-aos="fade-up" data-aos-delay="200" className='text-primary text-4xl md:text-5xl font-bold leading-tight capitalize text-text'>
-                        Building modern web experiences with <span className='text-primary/70'>Clean Code</span>
+                        {t('hero.headline')} <span className='text-primary/70'>{t("hero.headlineHighlight")}</span>
                     </h1>
 
                     <p data-aos="fade-up" data-aos-delay="400" className='text-gray-300 max-w-lg tracking-wide'>
-                        A Frontend-focused Software Engineer who loves building modern, scalable, and visually engaging web applications with Next.js, React, and TypeScript.
+                        {t("hero.description")}
                     </p>
-                    
+
                     <div data-aos="fade-up" className='flex items-center justify-center md:justify-start gap-4 pt-2'>
-                        <LinkButton href='#contact' text='Get in touch' icon={ArrowRight} rounded />
-                        <LinkButton href='#projects' text='View projects' variant='outline' rounded />
+                        <LinkButton href='#contact' text={t("hero.getInTouch")} icon={ArrowRight} rounded />
+                        <LinkButton href='#projects' text={t("hero.viewProjects")} variant='outline' rounded />
                     </div>
                 </div>
 

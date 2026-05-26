@@ -1,59 +1,62 @@
+"use client"
 import ProjecCard from "@/components/Project/ProjecCard"
 import SectionHeader from "@/components/Ui/SectionHeader"
-
-const projects = [
-
-    {
-        title: "Tamkeen",
-        description: "Professional recruitment and career consulting platform designed to connect qualified talents with leading opportunities across the Saudi and Gulf markets.",
-        image: "/assets/Projects/tamkeen.png",
-        tags: ["Next.js", "Typescript",],
-        liveUrl: "",
-    },
-    {
-        title: "Eraf Page",
-        description: "A modern home healthcare platform providing trusted medical and patient care services with a seamless and user-friendly experience.",
-        image: "/assets/Projects/eraf.png",
-        tags: ["React.js", "Typescript"],
-        liveUrl: "https://eraf-project.vercel.app/",
-    },
-    {
-        title: "Admin Dashboard",
-        description: "Ecommerce management dashboard featuring product control, order management, analytics, and responsive UI built for seamless administration.",
-        image: "/assets/Projects/dashboard.png",
-        tags: ["React.js", "Typescript", "Tanstack Query", "ShadCn"],
-        liveUrl: "",
-    },
-    {
-        title: "Indore Plants",
-        description: "Nature-inspired landing page designed to showcase the positive impact of plants through a modern and clean user experience.",
-        image: "/assets/Projects/Plant indor.png",
-        tags: ["React.js", "Typescript", "Aos Animation"],
-        liveUrl: "",
-    },
-    {
-        title: "Wealth Home",
-        description: "Real estate web application focused on simplifying property search and helping users find places that truly feel like home.",
-        image: "/assets/Projects/Wealt home.png",
-        tags: ["React.js", "Javascript",],
-        liveUrl: "",
-    },
-    {
-        title: "Old Portofolio",
-        description: "Personal portfolio website showcasing my projects, skills, and frontend development journey with a clean and responsive design.", image: "/assets/Projects/Old portofolio.png",
-        tags: ["HTML 5", "CSS", "Javascript"],
-        liveUrl: "https://omar2610sa.github.io/Cv-2/",
-    },
-]
-
+import { useTranslation } from "react-i18next"
 
 export default function Projects() {
+    const { t } = useTranslation()
+    const projects = [
+        {
+            title: "Tamkeen",
+            description: t('projects.items.tamkeen.description'),
+
+            image: "/assets/Projects/tamkeen.png",
+            tags: ["Next.js", "Typescript","Tailwind","AOS animation","Yup"],
+            liveUrl: "",
+        },
+        {
+            title: "Eraf Page",
+            description: t('projects.items.eraf.description'),
+            image: "/assets/Projects/eraf.png",
+            tags: ["React.js", "Typescript","Tailwind","AOS","Framer motions","Axios"],
+            liveUrl: "https://eraf-project.vercel.app/",
+        },
+        {
+            title: "Admin Dashboard",
+            description: t('projects.items.admin.description'),
+            image: "/assets/Projects/dashboard.png",
+            tags: ["React.js", "Typescript", "Tanstack Query", "ShadCn","Yup"],
+            liveUrl: "",
+        },
+        {
+            title: "Indore Plants",
+            description: t('projects.items.plants.description'),
+            image: "/assets/Projects/Plant indor.png",
+            tags: ["React.js", "Typescript", "Aos Animation"],
+            liveUrl: "",
+        },
+        {
+            title: "Wealth Home",
+            description: t('projects.items.wealth.description'),
+            image: "/assets/Projects/Wealt home.png",
+            tags: ["React.js", "Javascript",],
+            liveUrl: "",
+        },
+        {
+            title: "Old Portofolio",
+            description: t('projects.items.old.description'),
+            image: "/assets/Projects/Old portofolio.png",
+            tags: ["HTML 5", "CSS", "Javascript"],
+            liveUrl: "https://omar2610sa.github.io/Cv-2/",
+        },
+    ]
+
     return (
         <section id="projects" className="py-24 relative">
             <div className="absolute top-1/4 left-1/3 -translate-x-1/2 w-80 h-60 rounded-full blur-3xl bg-primary/10" />
             <div className="w-[90%] max-w-6xl mx-auto space-y-12">
                 <div data-aos="fade-up">
-                    <SectionHeader badge="Projects" title="Some of my recent" highlight="work" description="A selection of projects showcasing my ability to design, build, and scale modern fullstack applications." />
+                    <SectionHeader badge={t('projects.badge')} title={t('projects.titlePrefix')} highlight={t('projects.highlight')} description={t('projects.description')} />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 ">
