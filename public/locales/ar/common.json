@@ -14,7 +14,7 @@
     "headline": "بناء مواقع ويب حديثة باستخدام",
     "headlineHighlight": "كود نظيف",
     "description": "مهندس برمجيات يركز على الواجهة الأمامية ويحب بناء تطبيقات حديثة وقابلة للتوسع وجذابة بصريًا باستخدام Next.js و React و TypeScript.",
-    "getInTouch": "تواصل معنا",
+    "getInTouch": "تواصل معي",
     "viewProjects": "عرض المشاريع"
   },
   "about": {
@@ -46,7 +46,7 @@
   "skills": {
     "badge": "المهارات",
     "titlePrefix": "التقنيات التي أتقنها",
-    "highlight": "إتقان",
+    "highlight": "إتقان عملي",
     "description": "مجموعة من التقنيات التي أركز عليها لتصميم وبناء وتطوير مواقع ويب حديثة لواجهة أمامية قابلة للتوسع."
   },
   "projects": {
@@ -86,6 +86,7 @@
     "message": "الرسالة",
     "phone": "الهاتف",
     "location": "الموقع",
+    "locationDetails": "مصر، المنصورة | القاهرة",
     "github": "GitHub",
     "subject": "الموضوع",
     "button": "إرسال",

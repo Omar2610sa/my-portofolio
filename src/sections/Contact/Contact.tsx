@@ -18,8 +18,8 @@ export default function Contact() {
         {
             icon: GitBranch,
             label: t('contact.github'),
-            value: "Omar2610",
-            href: "https://github.com/Omar2610",
+            value: "Omar2610sa",
+            href: "https://github.com/Omar2610sa",
         },
         {
             icon: MapPin,
