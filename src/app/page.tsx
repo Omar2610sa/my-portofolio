@@ -6,6 +6,13 @@ import Hero from "@/sections/Hero/Hero";
 import Info from "@/sections/Info/Info";
 import Projects from "@/sections/Projects/Projects";
 import Skills from "@/sections/Skills/Skills";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Omar Portofolio",
+  description: "Welcome to my Portofolio",
+  icons: "/assets/code-xml.svg"
+};
 
 export default function Home() {
   return (
