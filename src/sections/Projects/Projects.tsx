@@ -46,7 +46,7 @@ export default function Projects() {
         {
             title: "Old Portfolio",
             description: t('projects.items.old.description'),
-            image: "/assets/Projects/Old Portofolio.png",
+            image: "/assets/Projects/Old portofolio.png",
             tags: ["HTML 5", "CSS", "Javascript"],
             liveUrl: "https://omar2610sa.github.io/Cv-2/",
         },
