@@ -11,7 +11,7 @@ export default function Projects() {
             title: "Eraf Page",
             description: t('projects.items.eraf.description'),
             image: "/assets/Projects/eraf.png",
-            tags: ["React.js", "Typescript", "Tailwind", "AOS", "Framer motions", "Axios"],
+            tags: ["React.js", "Typescript", "Tailwind", "AOS", "Framer motions", "Axios","App Router", "Swiper.js"],
             liveUrl: "https://eraf-project.vercel.app/",
         },
         {
@@ -33,7 +33,7 @@ export default function Projects() {
             title: "Indore Plants",
             description: t('projects.items.plants.description'),
             image: "/assets/Projects/Plant indor.png",
-            tags: ["React.js", "Typescript", "Aos Animation"],
+            tags: ["React.js", "Typescript", "Aos Animation", "MUI library"],
             liveUrl: "https://omar2610sa.github.io/IndorePlants/",
         },
         {
@@ -59,7 +59,6 @@ export default function Projects() {
                 <div data-aos="fade-up">
                     <SectionHeader badge={t('projects.badge')} title={t('projects.titlePrefix')} highlight={t('projects.highlight')} description={t('projects.description')} />
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 ">
                     {
                         projects.map((project, index) => {

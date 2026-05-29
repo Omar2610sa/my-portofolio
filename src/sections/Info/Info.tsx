@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 const stats = [
     {
         icon: Code2Icon,
-        count: 38,
+        count: 30,
         titleKey: 'info.stats.projects'
     },
     {

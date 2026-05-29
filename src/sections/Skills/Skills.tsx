@@ -13,9 +13,9 @@ const skillsData = [
     { name: 'HTML 5', percentage: 100 },
     { name: 'CSS', percentage: 95 },
     { name: 'Tailwind CSS', percentage: 95 },
-    { name: 'TanStack Table', percentage: 80 },
+    { name: 'TanStack Query', percentage: 80 },
     { name: 'Git', percentage: 95 },
-    { name: 'GitHub', percentage: 80 },
+    { name: 'GitHub', percentage: 90 },
 ]
 
 export default function Skills() {
