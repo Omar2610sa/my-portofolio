@@ -4,8 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Primary color */
+/* #20b2a6 */
 @theme {
-  --color-primary: #20b2a6;
+  --color-primary: #EF4444;
   --color-background: #0f1418;
   --color-card: #141a1f;
   --color-border: #242b32;

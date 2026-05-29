@@ -5,7 +5,7 @@ import Typed from 'typed.js';
 import DotGrid from '@/components/Hero/Background'
 import LinkButton from '@/components/Ui/LinkButton'
 import { ArrowRight } from 'lucide-react'
-import logo from "../../../public/assets/5807884988358266879.jpg"
+import logo from "../../../public/assets/sdad.jpg"
 import Image from 'next/image'
 import { useTranslation } from 'react-i18next';
 
@@ -43,7 +43,7 @@ export default function Hero() {
                     dotSize={5}
                     gap={12}
                     baseColor="#SF293A"
-                    activeColor="#20b2a6"
+                    activeColor="#b30000"
                     proximity={120}
                     shockRadius={250}
                     shockStrength={5}
