@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 
 export default function AboutSection() {
     const { t } = useTranslation()
-    const roles = [t('about.typed.role1'), t('about.typed.role2'), t('about.typed.role3')];
+    const roles = [t('about.typed.role1'),t('about.typed.role4'), t('about.typed.role2'), t('about.typed.role3')];
     const [currentRole, setCurrentRole] = useState(0);
 
     useEffect(() => {

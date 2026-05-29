@@ -10,7 +10,7 @@ export default function Logo() {
             </div>
 
             <p className="font-semibold text-lg md:text-xl tracking-wide text-gray-300 group-hover:text-primary transition-colors duration-300">
-                Omar Portofolio
+                Omar Portfolio
             </p>
         </Link>
     )

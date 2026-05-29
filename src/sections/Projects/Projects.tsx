@@ -6,6 +6,14 @@ import { useTranslation } from "react-i18next"
 export default function Projects() {
     const { t } = useTranslation()
     const projects = [
+
+        {
+            title: "Eraf Page",
+            description: t('projects.items.eraf.description'),
+            image: "/assets/Projects/eraf.png",
+            tags: ["React.js", "Typescript", "Tailwind", "AOS", "Framer motions", "Axios"],
+            liveUrl: "https://eraf-project.vercel.app/",
+        },
         {
             title: "Tamkeen",
             description: t('projects.items.tamkeen.description'),
@@ -13,13 +21,6 @@ export default function Projects() {
             image: "/assets/Projects/tamkeen.png",
             tags: ["Next.js", "Typescript", "Tailwind", "AOS animation", "Yup"],
             liveUrl: "",
-        },
-        {
-            title: "Eraf Page",
-            description: t('projects.items.eraf.description'),
-            image: "/assets/Projects/eraf.png",
-            tags: ["React.js", "Typescript", "Tailwind", "AOS", "Framer motions", "Axios"],
-            liveUrl: "https://eraf-project.vercel.app/",
         },
         {
             title: "Admin Dashboard",
@@ -33,19 +34,19 @@ export default function Projects() {
             description: t('projects.items.plants.description'),
             image: "/assets/Projects/Plant indor.png",
             tags: ["React.js", "Typescript", "Aos Animation"],
-            liveUrl: "",
+            liveUrl: "https://omar2610sa.github.io/IndorePlants/",
         },
         {
             title: "Wealth Home",
             description: t('projects.items.wealth.description'),
             image: "/assets/Projects/Wealt home.png",
             tags: ["React.js", "Javascript",],
-            liveUrl: "",
+            liveUrl: "https://omar2610sa.github.io/Wealt-home-RE-Website/",
         },
         {
-            title: "Old Portofolio",
+            title: "Old Portfolio",
             description: t('projects.items.old.description'),
-            image: "/assets/Projects/Old portofolio.png",
+            image: "/assets/Projects/Old Portofolio.png",
             tags: ["HTML 5", "CSS", "Javascript"],
             liveUrl: "https://omar2610sa.github.io/Cv-2/",
         },

@@ -18,6 +18,7 @@ export default function Hero() {
     useEffect(() => {
         typed.current = new Typed(el.current, {
             strings: [
+                'Hi I am Omar Moataz',
                 'Front-End Developer ◦ Next.js Specialist',
                 'Software Engineer',
                 'Experienced Sales',

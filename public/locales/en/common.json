@@ -21,7 +21,8 @@
     "typed": {
       "role1": "Front-End Developer",
       "role2": "Next.js Developer",
-      "role3": "Sales Experienced"
+      "role3": "Sales Experienced",
+      "role4": "Software Engineer"
     },
     "name": "Omar Moataz",
     "badge": "About Me",
@@ -135,7 +136,7 @@
         "role": "Software Sales",
         "company": "Transition Agency",
         "description": "Experience to build strategies for software projects and dealing with customers.",
-        "period": "Oct 2024 - Mar 2026",
+        "period": "Oct 2024 - Mar 2025",
         "tech": [
           "Sales experienced",
           "Negotiation"

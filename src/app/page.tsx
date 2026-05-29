@@ -9,8 +9,8 @@ import Skills from "@/sections/Skills/Skills";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Omar Portofolio",
-  description: "Welcome to my Portofolio",
+  title: "Omar Portfolio",
+  description: "Welcome to my Portfolio",
   icons: "/assets/code-xml.svg"
 };
 
