@@ -27,7 +27,7 @@ export default function Projects() {
             description: t('projects.items.admin.description'),
             image: "/assets/Projects/Dashboard.png",
             tags: ["React.js", "Typescript", "Tanstack Query", "ShadCn", "Yup"],
-            liveUrl: "",
+            liveUrl: "https://admin-base-dashboard-bqidnxijp-omar-salams-projects.vercel.app/",
         },
         {
             title: "Indore Plants",
