@@ -6,10 +6,10 @@ import LanguageDetector from "i18next-browser-languagedetector";
 // Files live in: public/locales/{lng}/common.json
 const resources = {
   en: {
-    common: require("./../public/locales/en/common.json")
+    common: require("../../public/locales/en/common.json")
   },
   ar: {
-    common: require("./../public/locales/ar/common.json")
+    common: require("../../public/locales/ar/common.json")
   }
 } as const;
 
