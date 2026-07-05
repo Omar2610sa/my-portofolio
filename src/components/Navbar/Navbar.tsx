@@ -73,7 +73,7 @@ export default function Navbar() {
 
                     <div className="hidden lg:flex lg:items-center lg:gap-3">
                         <LanguageSwitcher />
-                        <LinkButton text={t('nav.downloadCv')} rounded iconPosition="left" icon={Download} href="/" />
+                        <LinkButton text={t('nav.downloadCv')} rounded iconPosition="left" icon={Download} href="https://drive.google.com/file/d/1emDmuD0YE0lPlycSwTtDfcluzPmFJvtT/view?usp=sharing" />
                     </div>
 
                     <div className="flex justify-between items-center gap-3 lg:hidden">

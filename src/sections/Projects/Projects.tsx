@@ -8,10 +8,17 @@ export default function Projects() {
     const projects = [
 
         {
+            title: "Luxary E-commerce",
+            description: t('projects.items.luxary.description'),
+            image: "/assets/Projects/luxary.png",
+            tags: ["Next 16", "Typescript", "Tailwind", "Framer motions", "ShadCn", "REST APIs", "i18n", "Swiper.js"],
+            liveUrl: "https://luxury-ecommerce-umber.vercel.app/",
+        },
+        {
             title: "Eraf Page",
             description: t('projects.items.eraf.description'),
             image: "/assets/Projects/eraf.png",
-            tags: ["React.js", "Typescript", "Tailwind", "AOS", "Framer motions", "Axios","App Router", "Swiper.js"],
+            tags: ["React.js", "Typescript", "Tailwind", "AOS", "Framer motions", "Axios", "REST APIs", "i18n", "App Router", "Swiper.js"],
             liveUrl: "https://eraf-project.vercel.app/",
         },
         {
@@ -19,7 +26,7 @@ export default function Projects() {
             description: t('projects.items.tamkeen.description'),
 
             image: "/assets/Projects/tamkeen.png",
-            tags: ["Next.js", "Typescript", "Tailwind", "AOS animation", "Yup"],
+            tags: ["Next.js", "Typescript", "Tailwind", "AOS animation", "REST APIs", "i18n", "Yup"],
             liveUrl: "",
         },
         {

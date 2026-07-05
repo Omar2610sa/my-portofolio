@@ -11,7 +11,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Omar Portfolio",
   description: "Welcome to my Portfolio",
-  icons: "/assets/code-xml.svg"
+  icons: "/assets/code-xml (1).svg",
 };
 
 export default function Home() {

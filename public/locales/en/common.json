@@ -62,6 +62,9 @@
       "eraf": {
         "description": "A modern home healthcare platform providing trusted medical and patient care services with a seamless and user-friendly experience."
       },
+      "luxary": {
+        "description": "A modern luxury e-commerce platform offering high-end products and an exceptional shopping experience."
+      },
       "admin": {
         "description": "Ecommerce management dashboard featuring product control, order management, analytics, and responsive UI built for seamless administration."
       },
