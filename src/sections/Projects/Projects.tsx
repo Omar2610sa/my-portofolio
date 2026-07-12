@@ -27,7 +27,7 @@ export default function Projects() {
 
             image: "/assets/Projects/tamkeen.png",
             tags: ["Next.js", "Typescript", "Tailwind", "AOS animation", "REST APIs", "i18n", "Yup"],
-            liveUrl: "",
+            liveUrl: "https://tamkeen-main.vercel.app/",
         },
         {
             title: "Admin Dashboard",
