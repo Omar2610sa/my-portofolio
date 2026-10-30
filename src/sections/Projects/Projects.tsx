@@ -2,15 +2,14 @@
 import ProjecCard from "@/components/Project/ProjecCard"
 import SectionHeader from "@/components/Ui/SectionHeader"
 import { useTranslation } from "react-i18next"
-
 export default function Projects() {
     const { t } = useTranslation()
     const projects = [
 
         {
-            title: "Luxary E-commerce",
+            title: "YUMEII E-commerce",
             description: t('projects.items.luxary.description'),
-            image: "/assets/Projects/luxary.png",
+            image: "/assets/Projects/Screenshot YUMII.png",
             tags: ["Next 16", "Typescript", "Tailwind", "Framer motions", "ShadCn", "REST APIs", "i18n", "Swiper.js"],
             liveUrl: "https://luxury-ecommerce-umber.vercel.app/",
         },

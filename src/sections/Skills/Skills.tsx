@@ -16,6 +16,10 @@ const skillsData = [
     { name: 'TanStack Query', percentage: 80 },
     { name: 'Git', percentage: 95 },
     { name: 'GitHub', percentage: 90 },
+    { name: 'Node.js', percentage: 85 },
+    { name: 'Express.js', percentage: 90 },
+    { name: 'MongoDB', percentage: 90 },
+    { name: 'Nest.js', percentage: 75 },
 ]
 
 export default function Skills() {
