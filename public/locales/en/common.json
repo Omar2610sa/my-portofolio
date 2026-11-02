@@ -46,6 +46,9 @@
   },
   "skills": {
     "badge": "Skills",
+    "skills": "Skills",
+    "others": "Other Skills",
+    "tools": "Tools",
     "titlePrefix": "Technologies I",
     "highlight": "Master",
     "description": "A selection of technologies I specialize in to design, build, and scale modern front-end websites."
