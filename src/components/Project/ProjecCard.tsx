@@ -1,6 +1,7 @@
 import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { LuGithub } from "react-icons/lu"
 
 interface ProjecCard {
     title: string
@@ -8,6 +9,8 @@ interface ProjecCard {
     liveUrl: string
     image: string
     tags: string[]
+    label?: string
+    gitHub?: string
 }
 
 export default function ProjecCard({ title,
@@ -15,12 +18,20 @@ export default function ProjecCard({ title,
     liveUrl,
     image,
     tags,
+    label,
+    gitHub
 }: ProjecCard) {
     return (
         <div className=" group relative overflow-hidden rounded-2xl bg-surface border border-border transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-lg ">
             {/* Image */}
             <div className="relative h-60 md:h-64 overflow-hidden">
                 <Image fill src={image} alt={title} className="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+                {
+                    label &&
+                    <span className="absolute top-3 left-3 bg-primary text-amber-50 text-sm font-medium py-2.5 px-3 rounded-xl">
+                        {label}
+                    </span>
+                }
                 <div className="absolute inset-0 bg-background/50 opacity-0 group-hover:opacity-100 transition">
 
                 </div>
@@ -45,12 +56,19 @@ export default function ProjecCard({ title,
                 </div>
 
                 {/* Live Preview */}
-                
-                <div className="flex items-center  pt-3">
+
+                <div className="flex items-center justify-between  pt-3">
                     <Link href={liveUrl} className=" flex items-center gap-1 text-sm text-text-muted hover:text-primary transition ">
                         <ExternalLink className="w-5 h-5" />
                         Live
                     </Link>
+                    {
+                        gitHub &&
+                        <Link href={gitHub} className=" flex items-center gap-1 text-sm text-text-muted hover:text-primary transition ">
+                            <LuGithub className="w-5 h-5" />
+                            GitHub
+                        </Link>
+                    }
                 </div>
             </div>
         </div>

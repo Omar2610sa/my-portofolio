@@ -70,17 +70,16 @@ export default function Navbar() {
                             </li>
                         ))}
                     </ul>
-
                     <div className="hidden lg:flex lg:items-center lg:gap-3">
                         <LanguageSwitcher />
-                        <LinkButton text={t('nav.downloadCv')} rounded iconPosition="left" icon={Download} href="https://drive.google.com/file/d/1emDmuD0YE0lPlycSwTtDfcluzPmFJvtT/view?usp=sharing" />
+                        <LinkButton text={t('nav.downloadCv')} rounded iconPosition="left" icon={Download} href="https://drive.google.com/file/d/1RUK0LdLC9fP-WSf-58eYd1qNuFpYZMxp/view?usp=sharing" />
                     </div>
 
                     <div className="flex justify-between items-center gap-3 lg:hidden">
                         <LanguageSwitcher />
                         <button
                             onClick={() => setNavOpen(!navOpen)}
-                            className="z-50 w-10 h-10 rounded-lg flex items-center justify-center border border-border bg-surface/60 text-text hover:border-primary hover:text-primary transition"
+                            className="z-30 w-10 h-10 rounded-lg flex items-center justify-center border border-border bg-surface/60 text-text hover:border-primary hover:text-primary transition"
                         >
                             {navOpen ? <X size={22} /> : <MenuIcon size={22} />}
                         </button>

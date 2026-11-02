@@ -5,16 +5,25 @@ import { useTranslation } from "react-i18next"
 export default function Projects() {
     const { t } = useTranslation()
     const projects = [
-
         {
-            title: "YUMEII E-commerce",
-            description: t('projects.items.luxary.description'),
-            image: "/assets/Projects/Screenshot YUMII.png",
-            tags: ["Next 16", "Typescript", "Tailwind", "Framer motions", "ShadCn", "REST APIs", "i18n", "Swiper.js"],
-            liveUrl: "https://luxury-ecommerce-umber.vercel.app/",
+            title: t('projects.items.Mazzaq.title'),
+            description: t('projects.items.Mazzaq.description'),
+            image: "/assets/Projects/Screenshot Mazzak.png",
+            tags: ["Next 16", "Typescript", "Node.js", "Express", "MongoDB", "Mongoose", "JWT", "Cloudinary", "Multer", "Tailwind", "ShadCn", "REST APIs", "AOS", "zod", "Feature-Based Architecture"],
+            liveUrl: "https://resturant-proj-front-end.vercel.app/",
+            label: "Full Stack",
+            gitHub: "https://github.com/Omar2610sa/resturant-Proj"
         },
         {
-            title: "Eraf Page",
+            title: t('projects.items.luxary.title'),
+            description: t('projects.items.luxary.description'),
+            image: "/assets/Projects/Screenshot YUMII.png",
+            tags: ["Next 16", "Typescript", "Tailwind", "Framer motions", "ShadCn", "REST APIs", "i18n", "Swiper.js", "formik", "Yup", "Feature-Based Architecture"],
+            liveUrl: "https://luxury-ecommerce-umber.vercel.app/",
+            gitHub: "https://github.com/Omar2610sa/luxury-ecommerce"
+        },
+        {
+            title: t('projects.items.eraf.title'),
             description: t('projects.items.eraf.description'),
             image: "/assets/Projects/eraf.png",
             tags: ["React.js", "Typescript", "Tailwind", "AOS", "Framer motions", "Axios", "REST APIs", "i18n", "App Router", "Swiper.js"],
@@ -23,7 +32,6 @@ export default function Projects() {
         {
             title: "Tamkeen",
             description: t('projects.items.tamkeen.description'),
-
             image: "/assets/Projects/tamkeen.png",
             tags: ["Next.js", "Typescript", "Tailwind", "AOS animation", "REST APIs", "i18n", "Yup"],
             liveUrl: "https://tamkeen-main.vercel.app/",
@@ -70,7 +78,7 @@ export default function Projects() {
                         projects.map((project, index) => {
                             return (
                                 <div key={index} data-aos="fade-down">
-                                    <ProjecCard title={project.title} description={project.description} image={project.image} liveUrl={project.liveUrl} tags={project.tags} />
+                                    <ProjecCard title={project.title} description={project.description} image={project.image} liveUrl={project.liveUrl} tags={project.tags} label={project.label} gitHub={project.gitHub} />
                                 </div>
                             )
                         })

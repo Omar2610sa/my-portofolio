@@ -59,7 +59,12 @@
       "tamkeen": {
         "description": "Professional recruitment and career consulting platform designed to connect qualified talents with leading opportunities across the Saudi and Gulf markets."
       },
+      "Mazzaq": {
+        "title": "Mazzaq",
+        "description": "Mazzaq is a recipe discovery and management app that allows users to browse, search, and explore recipes, with a dashboard for managing recipes."
+      },
       "eraf": {
+        "title": "Eraf Landing page",
         "description": "A modern home healthcare platform providing trusted medical and patient care services with a seamless and user-friendly experience."
       },
       "luxary": {
@@ -123,7 +128,7 @@
     "highlight": "speaks volumes",
     "items": {
       "0": {
-        "role": "Front-End Developer",
+        "role": "Front-End Developer Intern",
         "company": "Al Almiya Alhura",
         "description": "Build modern E-commerce, Admin Dashboard, and Landing pages with modern technology.",
         "period": "2026 - Present",

@@ -5,6 +5,8 @@ import Link from "next/link"
 // import { Download } from "lucide-react"
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
+import LinkButton from "../Ui/LinkButton"
+import { Download } from "lucide-react"
 
 interface MobileNav {
     navOpen: boolean,
@@ -14,35 +16,35 @@ interface MobileNav {
 
 
 export default function MobileNav({ navOpen, setNavOpen }: MobileNav) {
-    
+
     const { t } = useTranslation()
-    
-        const navLinks = [
-            {
-                href: "#home",
-                label: t('nav.home')
-            },
-            {
-                href: "#about",
-                label: t('nav.about')
-            },
-            {
-                href: "#skills",
-                label: t('nav.skills')
-            },
-            {
-                href: "#projects",
-                label: t('nav.projects')
-            },
-            {
-                href: "#experience",
-                label: t('nav.experience')
-            },
-            {
-                href: "#contact",
-                label: t('nav.contact')
-            },
-        ]
+
+    const navLinks = [
+        {
+            href: "#home",
+            label: t('nav.home')
+        },
+        {
+            href: "#about",
+            label: t('nav.about')
+        },
+        {
+            href: "#skills",
+            label: t('nav.skills')
+        },
+        {
+            href: "#projects",
+            label: t('nav.projects')
+        },
+        {
+            href: "#experience",
+            label: t('nav.experience')
+        },
+        {
+            href: "#contact",
+            label: t('nav.contact')
+        },
+    ]
     return (
         <motion.div
             className="fixed inset-0 z-40 lg:hidden bg-background/70 backdrop-blur-sm"
@@ -58,16 +60,16 @@ export default function MobileNav({ navOpen, setNavOpen }: MobileNav) {
                 exit={{ x: "100%" }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-                <ul className="w-full">
+                <ul className="w-full ">
                     {navLinks.map((link, index) => (
                         <motion.li
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            onClick={()=> setNavOpen(false)}
+                            onClick={() => setNavOpen(false)}
                         >
-                            <Link href={link.href}  className="block w-full text-center py-6 px-6 rounded-lg text-xl font-medium text-text border border-transparent transition-all hover:bg-primary/10 hover:text-primary hover:border-border">
+                            <Link href={link.href} className="block w-full text-center py-6 px-6 rounded-lg text-xl font-medium text-text border border-transparent transition-all hover:bg-primary/10 hover:text-primary hover:border-border">
                                 {link.label}
                             </Link>
                         </motion.li>
@@ -79,6 +81,10 @@ export default function MobileNav({ navOpen, setNavOpen }: MobileNav) {
                         transition={{ delay: navLinks.length * 0.1 }}
                     >
                         {/* <LinkButton text="Download Cv" rounded iconPosition="left" icon={Download} href="/" /> */}
+                        <div className="flex justify-center">
+                        <LinkButton text={t('nav.downloadCv')} rounded iconPosition="left" icon={Download} href="https://drive.google.com/file/d/1RUK0LdLC9fP-WSf-58eYd1qNuFpYZMxp/view?usp=sharing" />
+                        </div>
+
                     </motion.li>
                 </ul>
             </motion.aside>
